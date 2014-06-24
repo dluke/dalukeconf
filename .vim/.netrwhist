@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/dan/workspace/MyFirstApp/src/com/example/myfirstapp'
+let g:netrw_dirhist_2='/home/dan/workspace/MyFirstApp/res/layout'
+let g:netrw_dirhist_3='/home/dan/.vim'
+let g:netrw_dirhist_4='/home/dan/workspace/MyFirstApp/src/com/example/myfirstapp'
+let g:netrw_dirhist_5='/home/dan/projects/django/calulator/cal'
+let g:netrw_dirhist_6='/home/dan/.vimperator'
