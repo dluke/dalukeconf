@@ -1,0 +1,2 @@
+cp -r ~/dalukeconf/.vim ~/dalukeconf/.vimrc .
+cp ~/dalukeconf/.bashrc .
