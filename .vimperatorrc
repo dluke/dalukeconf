@@ -1,0 +1,8 @@
+
+noremap l :tabnext<CR>
+noremap h :tabprevious<CR>
+
+noremap j 3j
+noremap k 3k
+
+noremap <C-h> j
