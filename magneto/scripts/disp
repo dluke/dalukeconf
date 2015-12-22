@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dvar='localhost:'$1'.0'
+echo 'setting DISPLAY to '$dvar
+screen sh -c "export DISPLAY=$dvar"
+
