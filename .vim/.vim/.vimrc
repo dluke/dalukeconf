@@ -1,22 +1,12 @@
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-
-"Add plugins here
-
-Plugin 'tpope/vim-rails'
-Plugin 'othree/html5.vim'
-Plugin 'kchmck/vim-coffee-script'
-
-call vundle#end()
+"Pathogen - a vim plugin for managing vim plugins
+execute pathogen#infect()
 
 "Enable advanced vim features
 set nocompatible
 
-"mapleader
-let mapleader=','
+"Progamming
+filetype plugin indent on
+syntax enable
 
 "Set dark for solarized
 "set background=dark
@@ -36,15 +26,12 @@ colorscheme distinguished
 "Indent
 set tabstop=4
 set shiftwidth=4
-set softtabstop=2
+set softtabstop=4
 set smarttab
 set expandtab
 
-" Tab between buffers
-"noremap <tab> bnext
-
 "remap history 'q:' to do nothing to avoid accidents
-"nnoremap q: <Nop>
+nnoremap q: <Nop>
 
 "Make backspace work like most editors
 set backspace=2
@@ -58,11 +45,10 @@ inoremap JK <Esc>
 inoremap KJ <Esc>
 
 "Easier split navigation
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 
 "Prevent asking to encrypt on save
 ca X x
@@ -82,6 +68,9 @@ set undoreload=10000
 "keep buffers and marks while switching files
 set hidden
 
+"mapleader
+let mapleader=','
+
 "Enhanced autocompletion
 set wildmenu
 
@@ -89,8 +78,8 @@ set wildmenu
 set ruler
 
 "Show line length of 79 characters
-set colorcolumn=80
-hi ColorColumn ctermbg=lightgreen
+"set colorcolumn=80
+"hi ColorColumn ctermbg=lightgreen
 
 "Auto change working directory to current file
 "set autochdir
@@ -148,17 +137,11 @@ let g:session_autoload = 'no'
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 
-" On opening file
+"mappings for sideways.vim
+nnoremap <F9> :SidewaysLeft<cr>
+nnoremap <F10> :SidewaysRight<cr>
 
-"Don't auto add comments on newline
-autocmd BufNewFile,BufRead * setlocal formatoptions=
+"Very important for pasting 
+"You need to hit F2 before and after pasting, do this in insert mode
+set pastetoggle=<F2>
 
-
-"Progamming
-syntax enable
-filetype plugin indent on
-
-" Switching buffers
-noremap <C-k> :bn<Return>
-noremap <C-j> :bp<Return>
-noremap <C-w> :bd<Return>
