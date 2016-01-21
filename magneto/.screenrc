@@ -1,0 +1,62 @@
+shelltitle "magneto"
+startup_message off
+# Bind F13 to command (^a)
+#bindkey -k k3 command
+#rebind ^A w and ^A ^W to show windowlist
+bind w
+bind ^w
+bind w windowlist -b
+bind ^w windowlist -b
+
+#rebind 
+
+activity "%0c Activity %t^G"
+hardcopy_append on
+
+#Without clock
+#caption always " %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#caption always "%-Lw %{= BW}%51>%n%f* %t%{-}%+Lw %= %0c "
+
+#With clock in caption
+#caption always "%{= .w}%{r .} %= %0c"
+#hardstatus alwayslastline "%{= .w}%-Lw%{r .}%50>%n%f* %t%{-}%+Lw"
+
+#With clock in status line
+#caption always "%{= .w}%{r .} "
+caption always "%{= .w}%{r .} %= %D %d %M"
+#hardstatus alwayslastline "%{= .w}%-Lw%{r .}%50>%n%f* %t%{-}%+Lw%<%-06= %0c"
+hardstatus alwayslastline "%{= .w}%-Lw%50>%{r}(%{-}%{b .}%n%f* %t%{-}%{r})%{-}%+Lw%<%-06= %0c"
+
+
+#works well with vim 
+altscreen on
+
+# Need more windows!
+bind  + select 10
+bind \^ select 11
+bind \# select 12
+bind  $ select 13
+bind  ( select 14
+bind  ) select 15
+bind  & select 16
+bind  @ select 17
+bind  % select 18
+
+# tab through windows quickly
+bindkey -k k8 next # F8 = next
+bindkey -k k5 prev # F5 = prev
+
+# unbind lock screen
+ bind x
+
+
+# open new windows at the current working dir with C-x
+# extemely useful for initialising screen environment
+bind ^x
+bind ^x stuff "\screen -X chdir $PWD;\screen^M"
+
+
+# I hammer this key so often
+bind ^A
+bind ^F other
+
